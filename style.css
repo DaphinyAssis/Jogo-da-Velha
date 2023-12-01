@@ -1,0 +1,95 @@
+@font-face {
+    font-family: Lemonmilk;
+    src: url(fonts/LEMONMILK-Regular.otf);
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lemonmilk;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f8ff;
+    color: #000;
+}
+
+body.dark-theme {
+    background-color: #2b134b;
+    color: #fff;
+}
+.corner-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+.icon {
+    width: 60px;
+  height: 60px;
+  display: inline-block;
+  opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  #sunIcon {
+    display: inline-block;
+  }
+  
+  #moonIcon {
+    display: none;
+  }
+  
+  body.dark-theme #sunIcon {
+    display: none;
+    opacity: 0;
+  }
+  
+  body.dark-theme #moonIcon {
+    display: inline-block;
+    opacity: 1;
+  }
+
+main{
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.theme{
+    position: relative;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+hr{
+    font-weight: bold;
+    height: 3px;
+    background: #000;
+    margin-bottom: 10px;
+}
+
+.game{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.game button{
+    width: 100px;
+    height: 100px;
+    margin:5px;
+    cursor:pointer;
+    font-size: 50px;
+    background: #fff;
+}
